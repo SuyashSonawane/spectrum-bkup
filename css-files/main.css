@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+*{
+    margin:0;
+    padding: 0;
+    
+}
+body{
+    margin:0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #595959;
+
+}
+.spinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;    
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background:rgba(0, 0, 0, 0.7);
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 999999999999999999;
+ }
+#typed{
+    position: absolute;
+    font-size: 4.3em;
+    color: #f5f5f5;
+  font-family: 'Fredoka One', cursive;
+    top: 3.5em;     
+ 
+    text-shadow: 13px 11px 20px black;
+}
+.typed-cursor{
+    display: none;
+}
+#typed::after {
+    content: '|';
+    opacity: 1;
+    transform: scale(20);
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+.type-wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+ 
+
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+#spectrum{
+    font-size: 3em;
+    -webkit-animation: Color 2s ease-in-out infinite;
+}
+#display-div{
+    display: none;
+} 
+nav{
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:  "g1" "g2" "g3" ;
+    position: fixed;
+    top: 0.5em;
+    width: 100%;
+    height: 15vh;
+}
+.logo{
+    /* grid-area: g1; */
+    display: flex;
+    justify-content: center
+}
+.logo img{
+    position: relative;
+    top: 1.5em;
+    left: 0.5em;
+    height: 8em;
+    z-index: 12;
+    transition: 0.2s all ease;
+}
+.logo img:hover{
+    transform: scale(0.9);
+}
+#logo-shadow{
+    z-index: 11;
+    height: 6em;
+    left: -5em;
+    top: 2.5em;
+    filter: blur(15px);
+     transition: 0.2s all ease;
+}
+#logo-shadow:hover{
+    transform: scale(0.9);
+}
+.menu{
+   justify-self: end
+}
+.menu img{
+    justify-self: end;
+    position: relative;
+    right: 3em;
+    top: 2em;
+    height: 6em;
+    border-radius: 5em;
+    box-shadow:10px 9px 15px 0px #0000004d;
+    transition: all 0.2s ease;
+}
+.menu img:hover{
+    transform: scale(0.8);
+    box-shadow: 4px 4px 15px 0px #0000004d
+}
+.try{
+    height: 100vh;
+}
+ #particles-js{
+        height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+canvas {
+position: fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+@keyframes Color{
+  0%{
+    color:#A0D468;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#AC92EC;
+  }
+}
+
+@-moz-keyframes Color{
+  0%{
+    color:#A0D468;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#AC92EC;
+  }
+}
+
+@-webkit-keyframes Color{
+  0%{
+    color:#A0D468;
+  }
+  
+  20%{
+    color:#4FC1E9;
+  }
+  
+  40%{
+    color:#FFCE54;
+  }
+  
+  60%{
+    color:#FC6E51;
+  }
+  
+  80%{
+    color:#ED5565;
+  }
+  
+  100%{
+    color:#AC92EC;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queris */
+
+@media screen and (max-width: 800px) , screen and (max-height: 500px) {
+.logo img{
+    height: 4.9em;
+    transform: translate(0em,-1em);
+}
+#logo-shadow{
+    height: 4.2em;
+    left: -3.1em;
+    top: 1.9em;
+}
+#typed{
+    top: 6em;
+    font-size: 2.1em;   
+    margin: 0.25em 
+ }
+#spectrum{
+    font-size: 1.8em;
+    -webkit-animation: Color 2s ease-in-out infinite;
+}
+.menu img{
+    right: 2em;
+    height: 2.5em;
+}
+
+}
