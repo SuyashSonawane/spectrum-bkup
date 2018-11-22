@@ -2,53 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#424242" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Spectrum</title>
-    <link rel="stylesheet" href="/css-files/main.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon">
+    <title>Spectrum 2019</title>
+    <link rel="stylesheet" href="/cssFiles/main.css">   
+   
+    <link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
+    
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    
 </head>
 <body>
     <div id="overlay">
         <div class="spinner"></div>
     </div>
-    <script src="js-files/preloaders.js"></script>
+    <script src="jsFiles/preloaders.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <div id="particles-js"></div>
     <script>particlesJS.load('particles-js', 'particles.json',function () {console.log('particles.json loaded...')})</script>
     <div id="typed-strings">
         <p>Welcome to <br><b id="spectrum">SPECTRUM ^1000 </b></p>
         <p>An event hosted and conducted by<br /> PCCOE</p>
-        <p>Pimpri Chinchwad College of Engineering Pune</p>
+        <p>Pimpri Chinchwad College of Engineering Pune ^500</p>
     </div>    
     <div class="type-wrapper"><span id="typed"></span></div>
-    <div id="display-div">
-    <nav id="nav">
-        <div class="logo">
-           <img src="/images/logo.png" alt="" id="nusta-logo">
-            <img src="/images/logo-shadow.png" alt="" id="logo-shadow">
-        </div>
-        <div class="spacer"></div>
-        <div class="menu"><img src="/images/ham-menu.png"></div> 
-    </nav>
-    <div class="try"></div>
-    <div class="try"></div>
-    <div class="try"></div>
-    <div class="try"></div>
-    <div class="try"></div>
+    <div id="display-div" class="animated ">   
+        <div id="menu">
+            <svg id="SVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <circle id='svg-circle' cx="95%" cy="10%" r='0' fill="#2C3532" >
+                <!-- <animate attributeName="r" begin="0s" dur="1s" repeatCount="indefinite" from="0em" to="150em"/> -->
+                </circle>
+            </svg>
+
+            <div class="menu-items">
+                    <div class="nav-links">          
+                            <p id="p-home">Home</p>
+                            <p id="p-instruction">Instructions</p>
+                        <p id="p-events">Events</p>
+                        <p id="p-about-us">About Us</p>
+                        <p id='p-register'>Register</p>
+                        <p id="p-gallery">Gallery</p>
+                    </div>
+            </div>
+        </div>    
+        <nav id="nav">
+            <div class="logo">
+            <img src="/images/logo.png" alt="" id="nusta-logo">
+                <img src="/images/logo-shadow.png" alt="" id="logo-shadow">
+            </div>
+            <div class="sppacer">           
+                <div id="spectrum-nav-bar">Spectrum 2019</div>
+            </div>
+            <div class="menu-icon"><img src="/images/ham-black.png" id='menu-icon'>
+            </div> 
+        </nav>
+        <div id="sec-container">
+            <img src="/images/notification.png" alt="notification" id='notification-img'>
+            <div id="notification-div">
+                
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+                <div class="clock-builder-output" id="clock"></div>
+                <script type="text/javascript" src="clock_assets/flipclock.js"></script>
+                <div class="bar"></div>
+                <div id="main-notifications">              
+                </div>
+            </div>
+            <div class="spectrum-heading">
+                <div class="spacer"></div>
+                <div class="spacer"></div><div class="spacer"></div><div class="spacer"></div>
+                <div  id="spectrum-text-main">
+                    <p>Spectrum</p>    
+                    <span id='typed-events-span'></span>   
+                </div> 
+                <div class="spacer"></div><div class="spacer"></div>
+                <div class="mouse-scroll">
+                    <div class="container">
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <span class="text" id="scroll-text">Scroll down</span>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </div>             
+            <div class="content-container">
+                <div class=" content" id="spectrum-info" >
+                    <div class="head-spectrum">
+                        About Spectrum
+                    </div>
+                    <div class="spectrum-info-content"></div>
+                </div>
+                <div class="events content">
+                    <div class="events-info"></div>
+                    <div class="events-name">
+                        Various Events
+                    </div>
+                    
+                </div>
+                <div class="locate-us content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7560.545843485765!2d73.76167!3d18.651745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b210131915734fd!2sPCCOE+-+Pimpri+Chinchwad+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1541905573815"
+                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen id="map"></iframe>
+                    <div class="contact-info">
+                        <div class="address">
+                            <b>Address</b> <br>
+                            <p>PCCOE,
+                            Near Akurdi Railway Station,
+                            Pune-411035</p>
+                        </div>
+                        <div class="contact">
+                            <b>Contact</b>
+                            <p>Phone: 7776816133 / 9226094959</p>
+                        </div>
+                        <b id='about-pccoe'>About <br> PCCOE</b>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="footer-distributed">
+
+                    <div class="footer-right">
+        
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>                  
+        
+                    </div>
+        
+                    <div class="footer-left">
+        
+                        <p class="footer-links">
+                            <a href="#">Home</a>
+                            ·
+                            <a href="#">Events</a>
+                            ·
+                            <a href="#">Gallery</a>
+                            ·
+                            <a href="#">About</a>
+                            ·
+                            <a href="#">Instructions</a>
+                            ·
+                            <a href="#">Contact</a>
+                        </p>
+        
+                        <p>PCCOE Spectrum &copy; 2019</p>
+                    </div>
+        
+                </footer>
+      
     </div>
+</div>
 
 
 
 
 
 
+<script src="/jsFiles/anime.min.js"></script>
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
     <script src="https://s3.amazonaws.com/myadvobuck/static/libs/typed.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script src="/js-files/particles.js"></script> -->
-    <script src="js-files/main.js"></script>
+    <script src="jsFiles/main.js"></script>
 </body>
 </html>
